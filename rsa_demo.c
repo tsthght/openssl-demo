@@ -30,7 +30,7 @@ char *my_encrypt(const char *str, const char *pubkey_path) {
 	// this is all about formats
 	// PEM_read_RSA_PUBKEY() reads the PEM format. 
 	// PEM_read_RSAPublicKey(0 reads the PKCS#1 format. 
-	//if((rsa = PEM_read_RSAPublicKey(fp, 0, 0, 0)) == NULL) {
+//	if((rsa = PEM_read_RSAPublicKey(fp, 0, 0, 0)) == NULL) {
 	if((rsa = PEM_read_RSA_PUBKEY(fp, 0, 0, 0)) == NULL) {
 		fclose(fp);
 		return NULL;
